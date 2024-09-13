@@ -42,6 +42,17 @@ columns:
               - CC BY-SA 4.0
               - CC BY-NC 4.0
               - CC BY-ND 4.0
+          siteID:
+            label: Site ID
+            type: text
           link:
             label: Link
             type: url
+          autoid:
+            type: text
+            readonly: true
+          commentsmanager:
+            label: Comments
+            type: commentsmanager
+
+

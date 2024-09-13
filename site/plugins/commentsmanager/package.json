@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "dev": "kirbyup serve src/index.js",
+        "build": "kirbyup src/index.js"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.1.3"
+    }
+}

@@ -717,7 +717,7 @@ trait AppPlugins
 		array $info = [],
 		string|null $root = null,
 		string|null $version = null
-	): Plugin|null {
+	): PLugin|null {
 		if ($extends === null) {
 			return static::$plugins[$name] ?? null;
 		}

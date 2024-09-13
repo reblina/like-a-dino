@@ -2,8 +2,6 @@
 
 namespace Kirby\Filesystem;
 
-use Kirby\Cms\App;
-use Kirby\Cms\Language;
 use Kirby\Toolkit\Str;
 
 /**
@@ -31,9 +29,19 @@ use Kirby\Toolkit\Str;
 class Filename
 {
 	/**
+	 * List of all applicable attributes
+	 */
+	protected array $attributes;
+
+	/**
 	 * The sanitized file extension
 	 */
 	protected string $extension;
+
+	/**
+	 * The source original filename
+	 */
+	protected string $filename;
 
 	/**
 	 * The sanitized file name
@@ -41,21 +49,23 @@ class Filename
 	protected string $name;
 
 	/**
-	 * Creates a new Filename object
-	 *
-	 * @param string $template for the final name
-	 * @param array $attributes List of all applicable attributes
+	 * The template for the final name
 	 */
-	public function __construct(
-		protected string $filename,
-		protected string $template,
-		protected array $attributes = []
-	) {
-		$this->name      = $this->sanitizeName($filename);
-		$this->extension = $this->sanitizeExtension(
+	protected string $template;
+
+	/**
+	 * Creates a new Filename object
+	 */
+	public function __construct(string $filename, string $template, array $attributes = [])
+	{
+		$this->filename   = $filename;
+		$this->template   = $template;
+		$this->attributes = $attributes;
+		$this->extension  = $this->sanitizeExtension(
 			$attributes['format'] ??
 			pathinfo($filename, PATHINFO_EXTENSION)
 		);
+		$this->name       = $this->sanitizeName($filename);
 	}
 
 	/**
@@ -232,24 +242,7 @@ class Filename
 	 */
 	protected function sanitizeName(string $name): string
 	{
-		// temporarily store language rules
-		$rules = Str::$language;
-		$kirby = App::instance(null, true);
-
-		// if current user, add rules for their language to `Str` class
-		if ($user = $kirby?->user()) {
-			Str::$language = [
-				...Str::$language,
-				...Language::loadRules($user->language())];
-		}
-
-		// sanitize name
-		$name = F::safeBasename($this->filename);
-
-		// restore language rules
-		Str::$language = $rules;
-
-		return $name;
+		return F::safeBasename($name);
 	}
 
 	/**

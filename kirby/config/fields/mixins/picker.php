@@ -2,7 +2,6 @@
 
 use Kirby\Toolkit\I18n;
 use Kirby\Toolkit\Str;
-use Kirby\Uuid\Uuids;
 
 return [
 	'props' => [
@@ -76,11 +75,7 @@ return [
 		 * @param string $store 'uuid'|'id'
 		 */
 		'store' => function (string $store = 'uuid') {
-			// fall back to ID, if UUIDs globally disabled
-			return match (Uuids::enabled()) {
-				false   => 'id',
-				default => Str::lower($store)
-			};
+			return Str::lower($store);
 		},
 
 		/**

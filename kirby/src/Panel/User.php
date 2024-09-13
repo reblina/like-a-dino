@@ -237,7 +237,6 @@ class User extends Model
 					'name'     => $user->name()->toString(),
 					'role'     => $user->role()->title(),
 					'username' => $user->username(),
-					'uuid'     => fn () => $user->uuid()?->toString()
 				]
 			]
 		);

@@ -602,7 +602,13 @@ class Environment
 	 */
 	protected function detectRequestUri(string|null $requestUri = null): Uri
 	{
-		$uri = new Uri($requestUri ?? '');
+		// make sure the URL parser works properly when there's a
+		// colon in the request URI but the URI is relative
+		if (Url::isAbsolute($requestUri) === false) {
+			$requestUri = 'https://getkirby.com' . $requestUri;
+		}
+
+		$uri = new Uri($requestUri);
 
 		// create the URI object as a combination of base uri parts
 		// and the parts from REQUEST_URI

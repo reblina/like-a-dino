@@ -1,0 +1,45 @@
+Caption: 
+
+----
+
+Alt: 
+
+----
+
+Photographer: 
+
+----
+
+License: 
+
+----
+
+Siteid: 
+
+----
+
+Link: 
+
+----
+
+Autoid: 
+
+----
+
+Mymap: 
+
+----
+
+Commentmanager: 
+
+----
+
+Sort: 1
+
+----
+
+Uuid: muw5lskD7q1hJctz
+
+----
+
+Template: image

@@ -1,0 +1,17 @@
+Title: something
+
+----
+
+Text: 
+
+----
+
+Year: 
+
+----
+
+Tags: 
+
+----
+
+Uuid: FH6KZiRe1fs7YpiB

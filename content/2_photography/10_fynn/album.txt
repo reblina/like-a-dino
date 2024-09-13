@@ -1,0 +1,29 @@
+Title: Fynn
+
+----
+
+Cover: 
+
+----
+
+Headline: 
+
+----
+
+Subheadline: 
+
+----
+
+Text: 
+
+----
+
+Tags: 
+
+----
+
+Uuid: gJuDivF7ffXGqUGL
+
+----
+
+Customid: 66e0263e8cba3

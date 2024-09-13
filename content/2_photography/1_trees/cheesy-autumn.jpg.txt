@@ -1,0 +1,71 @@
+Caption: 
+
+----
+
+Alt: Colorful autumn forest
+
+----
+
+Photographer: Federico Bottos
+
+----
+
+License: Unsplash
+
+----
+
+Siteid: 
+
+----
+
+Link: https://unsplash.com/photos/Z3NceSeZqgI
+
+----
+
+Autoid: 
+
+----
+
+Commentmanager:
+
+- 
+  commentID: 123
+  username: Fynn
+  comment: |
+    I am content and happy with myself
+- 
+  commentID: 124
+  username: Blina
+  comment: I am ok
+- 
+  commentID: 125
+  username: Neville Longbottom
+  comment: Love this!!
+
+----
+
+Mymap:
+
+lat: 48.8588897
+lon: "2.3200410217201"
+city: Paris
+region: Île-de-France
+country: Frankreich
+countryCode: fr
+osm: 7444
+
+----
+
+Simplemessage: 
+
+----
+
+Template: image
+
+----
+
+Sort: 2
+
+----
+
+Uuid: p6ClztZrkCB1KfLF

@@ -20,7 +20,7 @@ status:
 # Columns: https://getkirby.com/docs/guide/blueprints/layout#defining-columns
 columns:
   main:
-    width: 2/3
+    width: 1/2
     sections:
       # Fields section: https://getkirby.com/docs/reference/panel/sections/fields
       fields:
@@ -28,9 +28,27 @@ columns:
         fields:
           text:
             type: textarea
-            size: huge
+            size: medium
+          year:
+            type: number
+            width: 1/2
+          category:
+            type: select
+            options:
+              - Product Design 
+              - Editorial
+              - Photography
+            width: 1/2
+          tags:
+            type: tags
+          mymap:
+            type: locator
+            tiles: positron
+            liststyle: table
+
+          
   sidebar:
-    width: 1/3
+    width: 1/2
     sections:
       # Pages section: https://getkirby.com/docs/reference/panel/sections/pages
       pages:
@@ -39,4 +57,7 @@ columns:
       # Files section: https://getkirby.com/docs/reference/panel/sections/files
       files:
         type: files
+        layout: cards
+        template: image
+        info: "{{ file.dimensions }}"
 

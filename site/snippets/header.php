@@ -25,7 +25,7 @@
   */
   ?>
   <title><?= $site->title()->esc() ?> | <?= $page->title()->esc() ?></title>
-
+ 
   <?php
   /*
     Stylesheets can be included using the `css()` helper.
@@ -39,6 +39,18 @@
     'assets/css/index.css',
     '@auto'
   ]) ?>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+
+<!-- Montserrat Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
   <?php
   /*

@@ -9,7 +9,7 @@
  * More about controllers:
  * https://getkirby.com/docs/guide/templates/controllers
  */
-return function ($page) {
+return function ($page, $tag) {
 
     /**
      * We use the collection helper to fetch the notes collection defined in `/site/collections/notes.php`
@@ -19,7 +19,6 @@ return function ($page) {
      */
     $notes = collection('notes');
 
-    $tag = param('tag');
     if (empty($tag) === false) {
         $notes = $notes->filterBy('tags', $tag, ',');
     }

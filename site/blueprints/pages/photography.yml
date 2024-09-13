@@ -16,3 +16,4 @@ sections:
     extends: sections/albums
     label: Published Albums
     status: listed
+    layout: cards

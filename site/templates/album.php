@@ -33,7 +33,7 @@
       <ul class="album-gallery">
         <?php foreach ($gallery as $image): ?>
         <li>
-          <a href="<?= $image->url() ?>" data-lightbox>
+          <a href="<?= $page->url() . '/photo/' . $image->filename() ?>">
             <figure class="img" style="--w:<?= $image->width() ?>;--h:<?= $image->height() ?>">
               <img src="<?= $image->resize(800)->url() ?>" alt="<?= $image->alt()->esc() ?>">
             </figure>
@@ -44,4 +44,5 @@
     </div>
 
 </article>
+
 <?php snippet('footer') ?>

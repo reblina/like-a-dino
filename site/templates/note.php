@@ -44,7 +44,7 @@
     <ul class="note-tags">
       <?php foreach ($tags as $tag): ?>
       <li>
-        <a href="<?= $page->parent()->url(['params' => ['tag' => $tag]]) ?>"><?= esc($tag) ?></a>
+        <a href="<?= $page->parent()->url() . '/tag/' . $tag ?>"><?= esc($tag) ?></a>
       </li>
       <?php endforeach ?>
     </ul>

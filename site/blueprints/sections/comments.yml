@@ -1,0 +1,21 @@
+title: Comments
+type: files
+template: comment
+info: "{{ file.filename }} - {{ file.content.user }}"
+text: "{{ file.content.text }}"
+fields:
+  user:
+    label: User
+    type: text
+  email:
+    label: Email
+    type: email
+  text:
+    label: Comment
+    type: textarea
+  date:
+    label: Date
+    type: date
+  is_deleted:
+    label: Deleted
+    type: toggle

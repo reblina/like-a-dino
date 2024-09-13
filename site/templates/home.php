@@ -30,7 +30,7 @@
   ?>
   <?php if ($photographyPage = page('photography')): ?>
   <ul class="home-grid">
-    <?php foreach ($photographyPage->children()->listed() as $album): ?>
+    <?php foreach ($photographyPage->children()->listed()->shuffle() as $album): ?>
     <li>
       <a href="<?= $album->url() ?>">
         <figure>
